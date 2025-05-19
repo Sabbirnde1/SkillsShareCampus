@@ -104,9 +104,9 @@ const Explore = () => {
       <div className="flex flex-col md:flex-row md:items-center md:justify-between">
         <h1 className="text-3xl font-bold text-gray-900">Explore Services</h1>
         <div className="mt-4 md:mt-0">
-          <Button asChild className="flex items-center">
-            <Link href="/create-service">
-              <a>
+          <Link href="/create-service">
+            <Button className="flex items-center">
+              <span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-5 w-5 mr-2"
@@ -120,9 +120,9 @@ const Explore = () => {
                   />
                 </svg>
                 Create a Service
-              </a>
-            </Link>
-          </Button>
+              </span>
+            </Button>
+          </Link>
         </div>
       </div>
 
@@ -228,11 +228,9 @@ const Explore = () => {
                     <span className="text-lg font-bold text-gray-900">$25</span>
                     <span className="text-sm text-gray-500">/hour</span>
                   </div>
-                  <Button size="sm" asChild>
-                    <Link href={`/service/1`}>
-                      <a>View Details</a>
-                    </Link>
-                  </Button>
+                  <Link href={`/service/1`}>
+                    <Button size="sm">View Details</Button>
+                  </Link>
                 </div>
               </div>
             </div>
