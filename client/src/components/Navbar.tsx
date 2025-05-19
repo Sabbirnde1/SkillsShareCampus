@@ -15,7 +15,7 @@ import { useState } from "react";
 
 const Navbar = () => {
   const [location] = useLocation();
-  const { user, isAuthenticated } = useAuth() as { user: User | null, isAuthenticated: boolean };
+  const { user, isAuthenticated } = useAuth() as { user: AuthUser | null, isAuthenticated: boolean };
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navLinks = [

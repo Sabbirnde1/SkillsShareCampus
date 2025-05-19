@@ -103,9 +103,9 @@ const Home = () => {
                       <div className="rounded-md shadow">
                         <Button asChild className="w-full">
                           <Link href="/create-service">
-                            <a className="flex items-center justify-center px-8 py-3 md:py-4 md:text-lg md:px-10">
+                            <div className="flex items-center justify-center px-8 py-3 md:py-4 md:text-lg md:px-10">
                               Create a Service
-                            </a>
+                            </div>
                           </Link>
                         </Button>
                       </div>
