@@ -46,22 +46,22 @@ const Footer = () => {
             <ul className="mt-4 space-y-4">
               <li>
                 <Link href="/help">
-                  <a className="text-base text-gray-500 hover:text-gray-900">Help Center</a>
+                  <span className="text-base text-gray-500 hover:text-gray-900 cursor-pointer">Help Center</span>
                 </Link>
               </li>
               <li>
                 <Link href="/safety">
-                  <a className="text-base text-gray-500 hover:text-gray-900">Safety Guidelines</a>
+                  <span className="text-base text-gray-500 hover:text-gray-900 cursor-pointer">Safety Guidelines</span>
                 </Link>
               </li>
               <li>
                 <Link href="/blog">
-                  <a className="text-base text-gray-500 hover:text-gray-900">Blog</a>
+                  <span className="text-base text-gray-500 hover:text-gray-900 cursor-pointer">Blog</span>
                 </Link>
               </li>
               <li>
                 <Link href="/ambassadors">
-                  <a className="text-base text-gray-500 hover:text-gray-900">Campus Ambassadors</a>
+                  <span className="text-base text-gray-500 hover:text-gray-900 cursor-pointer">Campus Ambassadors</span>
                 </Link>
               </li>
             </ul>
@@ -74,22 +74,22 @@ const Footer = () => {
             <ul className="mt-4 space-y-4">
               <li>
                 <Link href="/explore?category=tutoring">
-                  <a className="text-base text-gray-500 hover:text-gray-900">Tutoring</a>
+                  <span className="text-base text-gray-500 hover:text-gray-900 cursor-pointer">Tutoring</span>
                 </Link>
               </li>
               <li>
                 <Link href="/explore?category=design">
-                  <a className="text-base text-gray-500 hover:text-gray-900">Design & Creative</a>
+                  <span className="text-base text-gray-500 hover:text-gray-900 cursor-pointer">Design & Creative</span>
                 </Link>
               </li>
               <li>
                 <Link href="/explore?category=coding">
-                  <a className="text-base text-gray-500 hover:text-gray-900">Tech & Programming</a>
+                  <span className="text-base text-gray-500 hover:text-gray-900 cursor-pointer">Tech & Programming</span>
                 </Link>
               </li>
               <li>
                 <Link href="/explore">
-                  <a className="text-base text-gray-500 hover:text-gray-900">All Categories</a>
+                  <span className="text-base text-gray-500 hover:text-gray-900 cursor-pointer">All Categories</span>
                 </Link>
               </li>
             </ul>
@@ -152,13 +152,13 @@ const Footer = () => {
           </div>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <Link href="/privacy">
-              <a className="text-sm text-gray-500 hover:text-gray-900">Privacy Policy</a>
+              <span className="text-sm text-gray-500 hover:text-gray-900 cursor-pointer">Privacy Policy</span>
             </Link>
             <Link href="/terms">
-              <a className="text-sm text-gray-500 hover:text-gray-900">Terms of Service</a>
+              <span className="text-sm text-gray-500 hover:text-gray-900 cursor-pointer">Terms of Service</span>
             </Link>
             <Link href="/cookies">
-              <a className="text-sm text-gray-500 hover:text-gray-900">Cookie Policy</a>
+              <span className="text-sm text-gray-500 hover:text-gray-900 cursor-pointer">Cookie Policy</span>
             </Link>
           </div>
         </div>
