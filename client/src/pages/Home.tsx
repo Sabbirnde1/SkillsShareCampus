@@ -75,207 +75,254 @@ const Home = () => {
   return (
     <main>
       {/* Hero Section */}
-      <section className="relative bg-white overflow-hidden">
-        <div className="max-w-7xl mx-auto">
-          <div className="relative z-10 bg-white pb-8 sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
-            <svg
-              className="hidden lg:block absolute right-0 inset-y-0 h-full w-48 text-white transform translate-x-1/2"
-              fill="currentColor"
-              viewBox="0 0 100 100"
-              preserveAspectRatio="none"
-              aria-hidden="true"
-            >
-              <polygon points="50,0 100,0 50,100 0,100" />
-            </svg>
-            <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-10 md:pt-16">
-              <div className="sm:text-center lg:text-left">
-                <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
-                  <span className="block">Turn your skills into</span>
-                  <span className="block text-primary">campus income</span>
-                </h1>
-                <p className="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
-                  The exclusive marketplace for students to offer services, collaborate, and build
-                  real portfolios. Get verified with your .edu email today.
-                </p>
-                <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
-                  {isAuthenticated ? (
-                    <>
-                      <div className="rounded-md shadow">
-                        <div className="w-full">
-                          <Link href="/create-service">
-                            <Button className="w-full">
-                              <span className="flex items-center justify-center px-8 py-3 md:py-4 md:text-lg md:px-10">
-                                Create a Service
-                              </span>
-                            </Button>
-                          </Link>
-                        </div>
-                      </div>
-                      <div className="mt-3 sm:mt-0 sm:ml-3">
-                        <Button asChild variant="outline">
-                          <Link href="/explore">
-                            <a className="flex items-center justify-center px-8 py-3 md:py-4 md:text-lg md:px-10">
-                              Browse Services
-                            </a>
-                          </Link>
-                        </Button>
-                      </div>
-                    </>
-                  ) : (
-                    <>
-                      <div className="rounded-md shadow">
-                        <Button asChild className="w-full">
-                          <a
-                            href="/api/login"
-                            className="flex items-center justify-center px-8 py-3 md:py-4 md:text-lg md:px-10"
-                          >
-                            Get Started
-                          </a>
-                        </Button>
-                      </div>
-                      <div className="mt-3 sm:mt-0 sm:ml-3">
-                        <Button asChild variant="outline">
-                          <Link href="/explore">
-                            <a className="flex items-center justify-center px-8 py-3 md:py-4 md:text-lg md:px-10">
-                              Browse Services
-                            </a>
-                          </Link>
-                        </Button>
-                      </div>
-                    </>
-                  )}
+      <section className="relative hero-gradient overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-indigo-600 to-purple-600 opacity-90"></div>
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 lg:py-32">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="text-center lg:text-left">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight">
+                <span className="block text-white">Turn your skills into</span>
+                <span className="block mt-2 text-indigo-200">campus income</span>
+              </h1>
+              <p className="mt-6 text-xl text-indigo-100 sm:max-w-xl sm:mx-auto lg:mx-0">
+                The exclusive marketplace for students to offer services, collaborate, and build
+                real portfolios. Get verified with your .edu email today.
+              </p>
+              
+              <div className="mt-8 flex flex-col sm:flex-row sm:justify-center lg:justify-start gap-4">
+                {isAuthenticated ? (
+                  <>
+                    <Link href="/create-service">
+                      <Button className="btn-animated w-full sm:w-auto px-8 py-4 text-lg bg-white text-indigo-700 hover:bg-indigo-50 font-medium rounded-lg shadow-lg hover:shadow-xl transition-all">
+                        Create a Service
+                      </Button>
+                    </Link>
+                    <Link href="/explore">
+                      <Button variant="outline" className="btn-animated w-full sm:w-auto px-8 py-4 text-lg bg-transparent border-2 border-white text-white hover:bg-white/10 font-medium rounded-lg transition-all">
+                        Browse Services
+                      </Button>
+                    </Link>
+                  </>
+                ) : (
+                  <>
+                    <a href="/api/login">
+                      <Button className="btn-animated w-full sm:w-auto px-8 py-4 text-lg bg-white text-indigo-700 hover:bg-indigo-50 font-medium rounded-lg shadow-lg hover:shadow-xl transition-all">
+                        Get Started
+                      </Button>
+                    </a>
+                    <Link href="/explore">
+                      <Button variant="outline" className="btn-animated w-full sm:w-auto px-8 py-4 text-lg bg-transparent border-2 border-white text-white hover:bg-white/10 font-medium rounded-lg transition-all">
+                        Browse Services
+                      </Button>
+                    </Link>
+                  </>
+                )}
+              </div>
+              
+              <div className="mt-10 flex items-center justify-center lg:justify-start space-x-6 text-white">
+                <div className="flex items-center">
+                  <CheckIcon className="h-5 w-5 text-indigo-200 mr-2" />
+                  <span className="text-sm">Campus-verified</span>
+                </div>
+                <div className="flex items-center">
+                  <CheckIcon className="h-5 w-5 text-indigo-200 mr-2" />
+                  <span className="text-sm">Secure payments</span>
+                </div>
+                <div className="flex items-center">
+                  <CheckIcon className="h-5 w-5 text-indigo-200 mr-2" />
+                  <span className="text-sm">Skill exchange</span>
+                </div>
+              </div>
+            </div>
+            
+            <div className="hidden lg:block relative">
+              <div className="absolute -top-6 -left-6 w-72 h-72 bg-indigo-400 rounded-full mix-blend-multiply filter blur-2xl opacity-30 animate-blob"></div>
+              <div className="absolute -bottom-8 -right-8 w-72 h-72 bg-purple-400 rounded-full mix-blend-multiply filter blur-2xl opacity-30 animate-blob animation-delay-2000"></div>
+              <div className="absolute inset-0 rounded-2xl overflow-hidden shadow-2xl transform -rotate-6">
+                <img
+                  className="w-full h-full object-cover"
+                  src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1050&h=700"
+                  alt="Students collaborating on campus"
+                />
+              </div>
+              <div className="absolute -right-10 top-1/3 glass-card p-4 rounded-lg shadow-lg transform rotate-3">
+                <div className="flex items-center space-x-2">
+                  <div className="w-10 h-10 rounded-full bg-green-500 flex items-center justify-center text-white font-bold">
+                    S
+                  </div>
+                  <div>
+                    <p className="text-sm font-medium">Sarah T.</p>
+                    <p className="text-xs text-gray-600">Just earned $120</p>
+                  </div>
+                </div>
+              </div>
+              <div className="absolute -left-8 bottom-10 glass-card p-4 rounded-lg shadow-lg transform -rotate-2">
+                <div className="flex items-center space-x-2">
+                  <div className="flex -space-x-2">
+                    <div className="w-8 h-8 rounded-full bg-blue-500 flex items-center justify-center text-white font-bold">J</div>
+                    <div className="w-8 h-8 rounded-full bg-purple-500 flex items-center justify-center text-white font-bold">M</div>
+                  </div>
+                  <p className="text-xs font-medium">20+ new students joined today</p>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
-          <img
-            className="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full"
-            src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1050&h=700"
-            alt="Students collaborating on campus"
-          />
         </div>
       </section>
 
       {/* Category Tabs */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-        <div className="sm:flex sm:items-baseline sm:justify-between">
-          <h2 className="text-2xl font-bold text-gray-900">Popular Categories</h2>
-          <Link href="/explore">
-            <a className="hidden text-sm font-semibold text-primary hover:text-primary-600 sm:block">
-              Browse all categories<span aria-hidden="true"> &rarr;</span>
-            </a>
-          </Link>
-        </div>
-        <div className="mt-3 sm:mt-4">
-          <div className="relative">
-            <div className="absolute inset-0 flex items-center" aria-hidden="true">
-              <div className="w-full border-t border-gray-200"></div>
-            </div>
-            <div className="relative flex justify-center sm:justify-start overflow-x-auto py-2 space-x-4">
-              {categories.map((category) => (
-                <button
-                  key={category.id}
-                  type="button"
-                  onClick={() => setActiveCategory(category.id)}
-                  className={`${
-                    activeCategory === category.id
-                      ? "bg-primary text-white"
-                      : "bg-white text-gray-700 hover:bg-gray-100"
-                  } px-6 py-2 rounded-full text-sm font-medium focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary whitespace-nowrap flex items-center`}
-                >
-                  {category.icon}
-                  {category.label}
-                </button>
-              ))}
+      <section className="py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-10">
+            <div>
+              <h2 className="text-3xl font-bold text-gray-900 mb-2">Popular Categories</h2>
+              <p className="text-gray-600 max-w-2xl">Discover skills and services offered by talented students across your campus</p>
             </div>
             <Link href="/explore">
-              <a className="block text-sm font-semibold text-primary hover:text-primary-600 mt-5 sm:hidden">
-                Browse all categories<span aria-hidden="true"> &rarr;</span>
-              </a>
+              <span className="mt-4 md:mt-0 text-sm font-semibold text-primary hover:text-primary-dark inline-flex items-center group transition-all duration-200 ease-in-out cursor-pointer">
+                Browse all categories
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1 transform group-hover:translate-x-1 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+              </span>
             </Link>
           </div>
-        </div>
-      </div>
-
-      {/* Featured Services */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div className="flex items-center justify-between mb-6">
-          <h2 className="text-2xl font-bold text-gray-900">Featured Services</h2>
-          <div className="flex items-center space-x-2">
-            <button className="p-2 rounded-full bg-gray-100 hover:bg-gray-200">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5 text-gray-600"
-                viewBox="0 0 20 20"
-                fill="currentColor"
+          
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-7 gap-4">
+            {categories.map((category) => (
+              <button
+                key={category.id}
+                type="button"
+                onClick={() => setActiveCategory(category.id)}
+                className={`category-badge relative flex flex-col items-center justify-center p-6 rounded-xl shadow-sm border transition-all duration-200 ${
+                  activeCategory === category.id
+                    ? "bg-indigo-50 border-indigo-200 shadow-md"
+                    : "bg-white border-gray-100 hover:border-indigo-100 hover:bg-indigo-50/30"
+                }`}
               >
-                <path
-                  fillRule="evenodd"
-                  d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
-                  clipRule="evenodd"
-                />
-              </svg>
-            </button>
-            <button className="p-2 rounded-full bg-gray-100 hover:bg-gray-200">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5 text-gray-600"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                  clipRule="evenodd"
-                />
-              </svg>
-            </button>
+                <div className={`w-12 h-12 flex items-center justify-center rounded-full mb-3 ${
+                  activeCategory === category.id 
+                    ? "bg-indigo-500 text-white" 
+                    : "bg-indigo-100 text-indigo-500"
+                }`}>
+                  {category.icon || (
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
+                    </svg>
+                  )}
+                </div>
+                <span className={`text-sm font-medium ${
+                  activeCategory === category.id ? "text-indigo-700" : "text-gray-700"
+                }`}>
+                  {category.label}
+                </span>
+                {activeCategory === category.id && (
+                  <div className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-6 h-1 bg-indigo-500 rounded-t-full"></div>
+                )}
+              </button>
+            ))}
           </div>
         </div>
+      </section>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+      {/* Featured Services */}
+      <section className="bg-gray-50 py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-12">
+            <div>
+              <h2 className="text-3xl font-bold text-gray-900 mb-2">Featured Services</h2>
+              <p className="text-gray-600 max-w-2xl">Top-rated skills offered by students on your campus</p>
+            </div>
+            <div className="mt-4 md:mt-0 flex items-center space-x-2">
+              <button className="p-2 rounded-full bg-white shadow-sm hover:bg-gray-50 border border-gray-200 transition-all duration-200">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-5 w-5 text-gray-600"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+              </button>
+              <button className="p-2 rounded-full bg-white shadow-sm hover:bg-gray-50 border border-gray-200 transition-all duration-200">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-5 w-5 text-gray-600"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+              </button>
+              <Link href="/explore">
+                <span className="text-sm font-semibold text-primary hover:text-primary-dark inline-flex items-center group transition-all duration-200 ease-in-out cursor-pointer">
+                  View all services
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1 transform group-hover:translate-x-1 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                  </svg>
+                </span>
+              </Link>
+            </div>
+          </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
           {/* Service Card 1 */}
-          <div className="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-md transition-shadow duration-300">
-            <img
-              className="h-48 w-full object-cover"
-              src="https://pixabay.com/get/gbdba7f5d7c105e6da38000e3144c885ef40932fb7c36369734e9bcf97ac490251836d0cd01587804c98bd800325801b27ba68bd8c7a7de761a16df4774c3f2d4_1280.jpg"
-              alt="Programming tutoring service"
-            />
-            <div className="p-5">
-              <div className="flex items-center justify-between">
-                <span className="px-2 py-1 text-xs font-medium bg-blue-100 text-blue-800 rounded-full">
+          <div className="card-hover bg-white rounded-xl shadow-md overflow-hidden">
+            <div className="relative">
+              <img
+                className="h-56 w-full object-cover"
+                src="https://pixabay.com/get/gbdba7f5d7c105e6da38000e3144c885ef40932fb7c36369734e9bcf97ac490251836d0cd01587804c98bd800325801b27ba68bd8c7a7de761a16df4774c3f2d4_1280.jpg"
+                alt="Programming tutoring service"
+              />
+              <div className="absolute top-4 right-4">
+                <span className="badge-primary px-3 py-1 text-xs font-medium rounded-full">
                   Coding
                 </span>
-                <div className="flex items-center">
-                  <StarIcon className="h-4 w-4 text-yellow-400" />
-                  <span className="text-sm text-gray-600 ml-1">4.9 (56)</span>
-                </div>
               </div>
-              <h3 className="mt-3 text-lg font-semibold text-gray-900 truncate">
+            </div>
+            <div className="p-6">
+              <div className="flex items-center mb-2">
+                <div className="flex">
+                  {[...Array(5)].map((_, i) => (
+                    <StarIcon 
+                      key={i} 
+                      className={`h-4 w-4 ${i < 5 ? 'text-yellow-400' : 'text-gray-300'}`} 
+                    />
+                  ))}
+                </div>
+                <span className="text-sm text-gray-600 ml-1">4.9 (56 reviews)</span>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">
                 Web Development Tutoring
               </h3>
-              <p className="mt-1 text-sm text-gray-500 line-clamp-2">
+              <p className="text-gray-600 text-sm mb-4 line-clamp-2">
                 I'll help you learn React.js, Node.js and build your portfolio projects from scratch.
               </p>
-              <div className="mt-4 flex items-center">
+              <div className="flex items-center pb-4 border-b border-gray-100">
                 <img
-                  className="h-8 w-8 rounded-full object-cover"
+                  className="h-10 w-10 rounded-full object-cover ring-2 ring-white"
                   src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=100&h=100"
                   alt="Provider profile"
                 />
-                <div className="ml-2">
+                <div className="ml-3">
                   <p className="text-sm font-medium text-gray-900">Alex Chen</p>
                   <p className="text-xs text-gray-500">Computer Science, MIT</p>
                 </div>
               </div>
               <div className="mt-4 flex items-center justify-between">
-                <div>
-                  <span className="text-lg font-bold text-gray-900">$25</span>
-                  <span className="text-sm text-gray-500">/hour</span>
+                <div className="flex items-baseline">
+                  <span className="text-2xl font-bold text-gray-900">$25</span>
+                  <span className="text-sm text-gray-500 ml-1">/hour</span>
                 </div>
-                <Button size="sm">Book Now</Button>
+                <Button className="bg-indigo-600 hover:bg-indigo-700">Book Now</Button>
               </div>
             </div>
           </div>
