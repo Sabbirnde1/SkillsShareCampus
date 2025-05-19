@@ -273,104 +273,113 @@ const Home = () => {
             </div>
           </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-          {/* Service Card 1 */}
-          <div className="card-hover bg-white rounded-xl shadow-md overflow-hidden">
-            <div className="relative">
-              <img
-                className="h-56 w-full object-cover"
-                src="https://pixabay.com/get/gbdba7f5d7c105e6da38000e3144c885ef40932fb7c36369734e9bcf97ac490251836d0cd01587804c98bd800325801b27ba68bd8c7a7de761a16df4774c3f2d4_1280.jpg"
-                alt="Programming tutoring service"
-              />
-              <div className="absolute top-4 right-4">
-                <span className="badge-primary px-3 py-1 text-xs font-medium rounded-full">
-                  Coding
-                </span>
-              </div>
-            </div>
-            <div className="p-6">
-              <div className="flex items-center mb-2">
-                <div className="flex">
-                  {[...Array(5)].map((_, i) => (
-                    <StarIcon 
-                      key={i} 
-                      className={`h-4 w-4 ${i < 5 ? 'text-yellow-400' : 'text-gray-300'}`} 
-                    />
-                  ))}
-                </div>
-                <span className="text-sm text-gray-600 ml-1">4.9 (56 reviews)</span>
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">
-                Web Development Tutoring
-              </h3>
-              <p className="text-gray-600 text-sm mb-4 line-clamp-2">
-                I'll help you learn React.js, Node.js and build your portfolio projects from scratch.
-              </p>
-              <div className="flex items-center pb-4 border-b border-gray-100">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+            {/* Service Card 1 */}
+            <div className="card-hover bg-white rounded-xl shadow-md overflow-hidden">
+              <div className="relative">
                 <img
-                  className="h-10 w-10 rounded-full object-cover ring-2 ring-white"
-                  src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=100&h=100"
-                  alt="Provider profile"
+                  className="h-56 w-full object-cover"
+                  src="https://pixabay.com/get/gbdba7f5d7c105e6da38000e3144c885ef40932fb7c36369734e9bcf97ac490251836d0cd01587804c98bd800325801b27ba68bd8c7a7de761a16df4774c3f2d4_1280.jpg"
+                  alt="Programming tutoring service"
                 />
-                <div className="ml-3">
-                  <p className="text-sm font-medium text-gray-900">Alex Chen</p>
-                  <p className="text-xs text-gray-500">Computer Science, MIT</p>
+                <div className="absolute top-4 right-4">
+                  <span className="badge-primary px-3 py-1 text-xs font-medium rounded-full">
+                    Coding
+                  </span>
                 </div>
               </div>
-              <div className="mt-4 flex items-center justify-between">
-                <div className="flex items-baseline">
-                  <span className="text-2xl font-bold text-gray-900">$25</span>
-                  <span className="text-sm text-gray-500 ml-1">/hour</span>
+              <div className="p-6">
+                <div className="flex items-center mb-2">
+                  <div className="flex">
+                    {[...Array(5)].map((_, i) => (
+                      <StarIcon 
+                        key={i} 
+                        className={`h-4 w-4 ${i < 5 ? 'text-yellow-400' : 'text-gray-300'}`} 
+                      />
+                    ))}
+                  </div>
+                  <span className="text-sm text-gray-600 ml-1">4.9 (56 reviews)</span>
                 </div>
-                <Button className="bg-indigo-600 hover:bg-indigo-700">Book Now</Button>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">
+                  Web Development Tutoring
+                </h3>
+                <p className="text-gray-600 text-sm mb-4 line-clamp-2">
+                  I'll help you learn React.js, Node.js and build your portfolio projects from scratch.
+                </p>
+                <div className="flex items-center pb-4 border-b border-gray-100">
+                  <img
+                    className="h-10 w-10 rounded-full object-cover ring-2 ring-white"
+                    src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=100&h=100"
+                    alt="Provider profile"
+                  />
+                  <div className="ml-3">
+                    <p className="text-sm font-medium text-gray-900">Alex Chen</p>
+                    <p className="text-xs text-gray-500">Computer Science, MIT</p>
+                  </div>
+                </div>
+                <div className="mt-4 flex items-center justify-between">
+                  <div className="flex items-baseline">
+                    <span className="text-2xl font-bold text-gray-900">$25</span>
+                    <span className="text-sm text-gray-500 ml-1">/hour</span>
+                  </div>
+                  <Button className="bg-indigo-600 hover:bg-indigo-700">Book Now</Button>
+                </div>
               </div>
             </div>
-          </div>
 
-          {/* Service Card 2 */}
-          <div className="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-md transition-shadow duration-300">
-            <img
-              className="h-48 w-full object-cover"
-              src="https://images.unsplash.com/photo-1541462608143-67571c6738dd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&h=350"
-              alt="Graphic design service"
-            />
-            <div className="p-5">
-              <div className="flex items-center justify-between">
-                <span className="px-2 py-1 text-xs font-medium bg-pink-100 text-pink-800 rounded-full">
-                  Design
-                </span>
-                <div className="flex items-center">
-                  <StarIcon className="h-4 w-4 text-yellow-400" />
-                  <span className="text-sm text-gray-600 ml-1">4.8 (42)</span>
-                </div>
-              </div>
-              <h3 className="mt-3 text-lg font-semibold text-gray-900 truncate">
-                Custom Logo & Brand Design
-              </h3>
-              <p className="mt-1 text-sm text-gray-500 line-clamp-2">
-                Professional logo design, branding kits, and social media assets for your student org
-                or startup.
-              </p>
-              <div className="mt-4 flex items-center">
+            {/* Service Card 2 */}
+            <div className="card-hover bg-white rounded-xl shadow-md overflow-hidden">
+              <div className="relative">
                 <img
-                  className="h-8 w-8 rounded-full object-cover"
-                  src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=100&h=100"
-                  alt="Provider profile"
+                  className="h-56 w-full object-cover"
+                  src="https://images.unsplash.com/photo-1541462608143-67571c6738dd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&h=350"
+                  alt="Graphic design service"
                 />
-                <div className="ml-2">
-                  <p className="text-sm font-medium text-gray-900">Maya Johnson</p>
-                  <p className="text-xs text-gray-500">Graphic Design, RISD</p>
+                <div className="absolute top-4 right-4">
+                  <span className="badge-secondary px-3 py-1 text-xs font-medium rounded-full">
+                    Design
+                  </span>
                 </div>
               </div>
-              <div className="mt-4 flex items-center justify-between">
-                <div>
-                  <span className="text-lg font-bold text-gray-900">$45</span>
-                  <span className="text-sm text-gray-500">/project</span>
+              <div className="p-6">
+                <div className="flex items-center mb-2">
+                  <div className="flex">
+                    {[...Array(5)].map((_, i) => (
+                      <StarIcon 
+                        key={i} 
+                        className={`h-4 w-4 ${i < 5 ? 'text-yellow-400' : 'text-gray-300'}`} 
+                      />
+                    ))}
+                  </div>
+                  <span className="text-sm text-gray-600 ml-1">4.8 (42 reviews)</span>
                 </div>
-                <Button size="sm">Book Now</Button>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">
+                  Custom Logo & Brand Design
+                </h3>
+                <p className="text-gray-600 text-sm mb-4 line-clamp-2">
+                  Professional logo design, branding kits, and social media assets for your student org
+                  or startup.
+                </p>
+                <div className="flex items-center pb-4 border-b border-gray-100">
+                  <img
+                    className="h-10 w-10 rounded-full object-cover ring-2 ring-white"
+                    src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=100&h=100"
+                    alt="Provider profile"
+                  />
+                  <div className="ml-3">
+                    <p className="text-sm font-medium text-gray-900">Maya Johnson</p>
+                    <p className="text-xs text-gray-500">Graphic Design, RISD</p>
+                  </div>
+                </div>
+                <div className="mt-4 flex items-center justify-between">
+                  <div className="flex items-baseline">
+                    <span className="text-2xl font-bold text-gray-900">$45</span>
+                    <span className="text-sm text-gray-500 ml-1">/project</span>
+                  </div>
+                  <Button className="bg-indigo-600 hover:bg-indigo-700">Book Now</Button>
+                </div>
               </div>
             </div>
-          </div>
 
           {/* Service Card 3 */}
           <div className="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-md transition-shadow duration-300">
