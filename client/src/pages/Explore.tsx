@@ -274,11 +274,9 @@ const Explore = () => {
                     <span className="text-lg font-bold text-gray-900">$45</span>
                     <span className="text-sm text-gray-500">/project</span>
                   </div>
-                  <Button size="sm" asChild>
-                    <Link href={`/service/2`}>
-                      <a>View Details</a>
-                    </Link>
-                  </Button>
+                  <Link href={`/service/2`}>
+                    <Button size="sm">View Details</Button>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -322,11 +320,9 @@ const Explore = () => {
                     <span className="text-lg font-bold text-gray-900">$30</span>
                     <span className="text-sm text-gray-500">/hour</span>
                   </div>
-                  <Button size="sm" asChild>
-                    <Link href={`/service/3`}>
-                      <a>View Details</a>
-                    </Link>
-                  </Button>
+                  <Link href={`/service/3`}>
+                    <Button size="sm">View Details</Button>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -370,11 +366,9 @@ const Explore = () => {
                     <span className="text-lg font-bold text-gray-900">$55</span>
                     <span className="text-sm text-gray-500">/project</span>
                   </div>
-                  <Button size="sm" asChild>
-                    <Link href={`/service/4`}>
-                      <a>View Details</a>
-                    </Link>
-                  </Button>
+                  <Link href={`/service/4`}>
+                    <Button size="sm">View Details</Button>
+                  </Link>
                 </div>
               </div>
             </div>
