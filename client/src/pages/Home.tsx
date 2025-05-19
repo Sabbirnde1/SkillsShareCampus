@@ -101,13 +101,15 @@ const Home = () => {
                   {isAuthenticated ? (
                     <>
                       <div className="rounded-md shadow">
-                        <Button asChild className="w-full">
+                        <div className="w-full">
                           <Link href="/create-service">
-                            <div className="flex items-center justify-center px-8 py-3 md:py-4 md:text-lg md:px-10">
-                              Create a Service
-                            </div>
+                            <Button className="w-full">
+                              <span className="flex items-center justify-center px-8 py-3 md:py-4 md:text-lg md:px-10">
+                                Create a Service
+                              </span>
+                            </Button>
                           </Link>
-                        </Button>
+                        </div>
                       </div>
                       <div className="mt-3 sm:mt-0 sm:ml-3">
                         <Button asChild variant="outline">
