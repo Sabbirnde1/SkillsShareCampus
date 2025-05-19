@@ -381,58 +381,68 @@ const Home = () => {
               </div>
             </div>
 
-          {/* Service Card 3 */}
-          <div className="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-md transition-shadow duration-300">
-            <img
-              className="h-48 w-full object-cover"
-              src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&h=350"
-              alt="Math tutoring service"
-            />
-            <div className="p-5">
-              <div className="flex items-center justify-between">
-                <span className="px-2 py-1 text-xs font-medium bg-green-100 text-green-800 rounded-full">
-                  Tutoring
-                </span>
-                <div className="flex items-center">
-                  <StarIcon className="h-4 w-4 text-yellow-400" />
-                  <span className="text-sm text-gray-600 ml-1">5.0 (29)</span>
-                </div>
-              </div>
-              <h3 className="mt-3 text-lg font-semibold text-gray-900 truncate">
-                Calculus & Statistics Tutoring
-              </h3>
-              <p className="mt-1 text-sm text-gray-500 line-clamp-2">
-                Expert help with calculus, statistics, and probability. I can help with assignments
-                and exam prep.
-              </p>
-              <div className="mt-4 flex items-center">
+            {/* Service Card 3 */}
+            <div className="card-hover bg-white rounded-xl shadow-md overflow-hidden">
+              <div className="relative">
                 <img
-                  className="h-8 w-8 rounded-full object-cover"
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=100&h=100"
-                  alt="Provider profile"
+                  className="h-56 w-full object-cover"
+                  src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&h=350"
+                  alt="Math tutoring service"
                 />
-                <div className="ml-2">
-                  <p className="text-sm font-medium text-gray-900">David Kim</p>
-                  <p className="text-xs text-gray-500">Mathematics, Stanford</p>
+                <div className="absolute top-4 right-4">
+                  <span className="badge-success px-3 py-1 text-xs font-medium rounded-full">
+                    Tutoring
+                  </span>
                 </div>
               </div>
-              <div className="mt-4 flex items-center justify-between">
-                <div>
-                  <span className="text-lg font-bold text-gray-900">$30</span>
-                  <span className="text-sm text-gray-500">/hour</span>
+              <div className="p-6">
+                <div className="flex items-center mb-2">
+                  <div className="flex">
+                    {[...Array(5)].map((_, i) => (
+                      <StarIcon 
+                        key={i} 
+                        className={`h-4 w-4 ${i < 5 ? 'text-yellow-400' : 'text-gray-300'}`} 
+                      />
+                    ))}
+                  </div>
+                  <span className="text-sm text-gray-600 ml-1">5.0 (29 reviews)</span>
                 </div>
-                <Button size="sm">Book Now</Button>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">
+                  Calculus & Statistics Tutoring
+                </h3>
+                <p className="text-gray-600 text-sm mb-4 line-clamp-2">
+                  Expert help with calculus, statistics, and probability. I can help with assignments
+                  and exam prep.
+                </p>
+                <div className="flex items-center pb-4 border-b border-gray-100">
+                  <img
+                    className="h-10 w-10 rounded-full object-cover ring-2 ring-white"
+                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=100&h=100"
+                    alt="Provider profile"
+                  />
+                  <div className="ml-3">
+                    <p className="text-sm font-medium text-gray-900">David Kim</p>
+                    <p className="text-xs text-gray-500">Mathematics, Stanford</p>
+                  </div>
+                </div>
+                <div className="mt-4 flex items-center justify-between">
+                  <div className="flex items-baseline">
+                    <span className="text-2xl font-bold text-gray-900">$30</span>
+                    <span className="text-sm text-gray-500 ml-1">/hour</span>
+                  </div>
+                  <Button className="bg-indigo-600 hover:bg-indigo-700">Book Now</Button>
+                </div>
               </div>
             </div>
-          </div>
 
-          {/* Service Card 4 */}
-          <div className="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-md transition-shadow duration-300">
-            <img
-              className="h-48 w-full object-cover"
-              src="https://images.unsplash.com/photo-1492538368677-f6e0afe31dcc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&h=350"
-              alt="Video editing service"
-            />
+            {/* Service Card 4 */}
+            <div className="card-hover bg-white rounded-xl shadow-md overflow-hidden">
+              <div className="relative">
+                <img
+                  className="h-56 w-full object-cover"
+                  src="https://images.unsplash.com/photo-1492538368677-f6e0afe31dcc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&h=350"
+                  alt="Video editing service"
+                />
             <div className="p-5">
               <div className="flex items-center justify-between">
                 <span className="px-2 py-1 text-xs font-medium bg-purple-100 text-purple-800 rounded-full">
