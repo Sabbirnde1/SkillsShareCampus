@@ -7,11 +7,11 @@ import { insertServiceSchema, insertReviewSchema, insertBookingSchema } from "@s
 import { insertUserSchema } from "@shared/schema";
 
 export async function registerRoutes(app: Express): Promise<Server> {
-  // Auth middleware
-  await setupAuth(app);
+  // // Auth middleware
+  // await setupAuth(app);
 
-  // Auth routes
-  app.get('/api/auth/user', isAuthenticated, async (req: any, res) => {
+  // // Auth routes
+  app.get('/api/auth/user', async (req: any, res) => {
     try {
       const userId = req.user.claims.sub;
       const user = await storage.getUser(userId);
@@ -192,7 +192,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
   });
 
   // Bookings routes
-  app.get('/api/bookings', isAuthenticated, async (req: any, res) => {
+  app.get('/api/bookings', async (req: any, res) => {
     try {
       const userId = req.user.claims.sub;
       const bookings = await storage.getUserBookings(userId);
